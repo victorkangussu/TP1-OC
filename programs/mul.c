@@ -4,7 +4,7 @@
 #include "../cpu.h"
 #include "mul.h"
 
-void programaMult(RAM *ram, CPU *cpu, int multiplicando, int multiplicador) {
+int programaMult(RAM *ram, CPU *cpu, int multiplicando, int multiplicador) {
     initCPU(cpu);
     createEmptyRAM(ram, 2);
 
@@ -45,18 +45,6 @@ void programaMult(RAM *ram, CPU *cpu, int multiplicando, int multiplicador) {
     setInstructions(cpu, trecho3);
     startCPU(cpu, ram);
 
-    printf("Resultado da multiplicacao: %d\n", cpu->register1);
+    return cpu->register1;
 }
 
-int main() {
-    CPU cpu;
-    RAM ram;
-
-    initCPU(&cpu);
-
-    programaMult(&ram, &cpu, -10, 15);
-
-    freeRAM(&ram);
-
-    return 0;
-}
