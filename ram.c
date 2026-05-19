@@ -21,11 +21,13 @@ void createRandomRAM(RAM *ram, int size) {
         ram->memory[i] = rand();
 }
 
+//coloca dado do registrador, na ram
 void setData(RAM *ram, int address, int content) {
     if (address >= 0 && address < ram->size)
         ram->memory[address] = content;
 }
 
+//pega dado da ram
 int getData(RAM *ram, int address) {
     if (address < 0 || address >= ram->size) {
         printf("Invalid memory access: %d\n", address);
