@@ -54,13 +54,9 @@ int main() {
 
     initCPU(&cpu);
 
-    programaMult(&ram, &cpu, 10, 15);
+    programaMult(&ram, &cpu, -10, 15);
 
     freeRAM(&ram);
 
     return 0;
 }
-
-
-
-

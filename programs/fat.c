@@ -50,7 +50,7 @@ int main() {
 
     initCPU(&cpu);
 
-    programaFat(&ram, &cpu, 6);
+    programaFat(&ram, &cpu, 7);
 
     freeRAM(&ram);
 

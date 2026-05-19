@@ -65,7 +65,7 @@ int main() {
 
     initCPU(&cpu);
 
-    programaDiv(&ram, &cpu, 60, 4);
+    programaDiv(&ram, &cpu, 60, -4);
 
     freeRAM(&ram);
 

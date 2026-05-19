@@ -22,14 +22,14 @@ void programaFib(RAM *ram, CPU *cpu, int n) {
     setData(ram, 0, 0); // coloca em ram->memory[0] o número 0
     setData(ram, 1, 1); // coloca em ram->memory[1] o número 1
 
-    for(int i = 2; i < n; i++) { // calcula do terceiro termo até o n-ésimo termo
+    for(int i = 2; i <= n; i++) { // calcula do terceiro termo até o n-ésimo termo
 
         Instruction soma[2]; // // cria mini-programa com 2 instruções
 
         soma[0].opcode = 0; // soma
         soma[0].add1 = 0; // pega memory->ram[0]
         soma[0].add2 = 1; // soma com memory->ram[1]
-        soma[0].add3 = 2; // salva resultado em RAM[2]
+        soma[0].add3 = 2; // salva resultado em memory->ram[2]
 
         soma[1].opcode = -1; // halt
 
@@ -55,7 +55,7 @@ int main() {
 
     initCPU(&cpu);
 
-    programaFib(&ram, &cpu, 15);
+    programaFib(&ram, &cpu, 32);
 
     freeRAM(&ram);
 
