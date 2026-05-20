@@ -96,7 +96,7 @@ int main() {
 
     initCPU(&cpu);
 
-    programaQuad(&ram, &cpu, 0, 2, 1);
+    programaQuad(&ram, &cpu, 1, 7, 12);
 
     freeRAM(&ram);
 

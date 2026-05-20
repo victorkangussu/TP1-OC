@@ -17,6 +17,9 @@
 // 4) Raízes negativas: a = 1, b = 7, c = 12
 // Solução: x1 = -3, x2 = -4
 
+// 5) Não é função do segundo grau: a = 0, b = 5, c = 9
+// Solução: não é função do segundo grau
+
 void programaQuad(RAM *ram, CPU *cpu, a, b, c);
 
 #endif
