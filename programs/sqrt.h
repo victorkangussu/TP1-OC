@@ -2,5 +2,6 @@
 #define SQRT_H
 
 int programaSqrt(RAM *ram, CPU *cpu, int n);
+int programaSqrt_shared(RAM *ram, CPU *cpu, int n);
 
 #endif

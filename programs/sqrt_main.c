@@ -11,7 +11,7 @@ int main() {
 
     initCPU(&cpu);
 
-    int raiz = programaSqrt(&ram, &cpu, 25);
+    int raiz = programaSqrt(&ram, &cpu, 1000);
     if (raiz != -1 && raiz != -2) printf("Raiz quadrada eh: %d\n", raiz);
     else if (raiz == -1) printf ("Não possui raiz quadrada real.\n");
     else printf ("Não possui raiz quadrada inteira.\n");

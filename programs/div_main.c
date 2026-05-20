@@ -11,7 +11,7 @@ int main() {
     initCPU(&cpu);
 
     int dividendo = 360;
-    int divisor = 60;
+    int divisor = -60;
 
     if (divisor == 0) {
         printf("Erro: divisor não pode ser igual a 0.\n");

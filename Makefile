@@ -9,6 +9,7 @@ all:
 	programs/$(PROGRAM).c \
 	programs/mul.c \
 	programs/div.c \
+	programs/sqrt.c \
 	cpu.c \
 	ram.c \
 	instruction.c \

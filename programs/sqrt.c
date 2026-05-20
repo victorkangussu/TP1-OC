@@ -26,6 +26,27 @@ int programaSqrt(RAM *ram, CPU *cpu, int n) {
     return -2; //nao possui raiz quadrada inteira
 }
 
+//Versao compartilhada sem createEmptyRAM() para uso em quad.c
+int programaSqrt_shared(RAM *ram, CPU *cpu, int n) {
+
+    initCPU(cpu);
+
+    if (n < 0) return -1; //numeros negativos nao possuem raiz quadrada real
+    
+    int candidato = 0;
+
+    while (1) {
+        cpu->register1 = programaMult_shared(ram, cpu, candidato, candidato);
+        cpu->register2 = candidato;
+
+        if (cpu->register1 == n) return cpu->register2;
+        if (cpu->register1 > n) break;
+        candidato++;
+    }
+
+    return -2; //nao possui raiz quadrada inteira
+}
+
 
 
 
