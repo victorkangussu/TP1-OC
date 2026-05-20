@@ -8,18 +8,18 @@ void programaFib(RAM *ram, CPU *cpu, int n) {
     initCPU(cpu);
     createEmptyRAM(ram, 3);
 
-    if(n == 1) {
+    if(n == 0) {
         printf("Resultado fibonacci: 0\n");
         return;
     }
 
-    if(n == 2) {
+    if(n == 1 || n == 2) {
         printf("Resultado fibonacci: 1\n");
         return;
     }
 
-    setData(ram, 0, 0); // coloca em ram->memory[0] o número 0
-    setData(ram, 1, 1); // coloca em ram->memory[1] o número 1
+    setData(ram, 0, 0); // coloca em ram->memory[0] o número 1
+    setData(ram, 1, 1); // coloca em ram->memory[1] o número 0
 
     for(int i = 2; i <= n; i++) { // calcula do terceiro termo até o n-ésimo termo
 
@@ -54,7 +54,7 @@ int main() {
 
     initCPU(&cpu);
 
-    programaFib(&ram, &cpu, 46);
+    programaFib(&ram, &cpu, 32);
 
     freeRAM(&ram);
 
