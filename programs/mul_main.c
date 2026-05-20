@@ -10,7 +10,7 @@ int main() {
 
     initCPU(&cpu);
 
-    printf ("O produto eh: %d\n", programaMult(&ram, &cpu, 7, 500));
+    printf ("O produto eh: %d\n", programaMult(&ram, &cpu, 7, 400));
 
     freeRAM(&ram);
 
