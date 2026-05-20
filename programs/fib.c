@@ -5,7 +5,6 @@
 #include "fib.h"
 
 void programaFib(RAM *ram, CPU *cpu, int n) {
-
     initCPU(cpu);
     createEmptyRAM(ram, 3);
 
@@ -55,7 +54,7 @@ int main() {
 
     initCPU(&cpu);
 
-    programaFib(&ram, &cpu, 32);
+    programaFib(&ram, &cpu, 46);
 
     freeRAM(&ram);
 

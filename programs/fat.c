@@ -5,7 +5,6 @@
 #include "fat.h"
 
 void programaFat(RAM *ram, CPU *cpu, int n) {
-
     initCPU(cpu);
     createEmptyRAM(ram, 3);
 

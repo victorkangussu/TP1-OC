@@ -8,7 +8,7 @@ all:
 	$(CC) $(CFLAGS) \
 	programs/$(PROGRAM).c \
 	programs/mul.c \
-	programs/sqrt.c \
+	programs/div.c \
 	cpu.c \
 	ram.c \
 	instruction.c \
