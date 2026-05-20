@@ -19,15 +19,15 @@ void programaSqrt(RAM *ram, CPU *cpu, int n) {
 
     while (1) {
 
-        int quadrado = programaMult(ram, cpu, candidato, candidato);
+        cpu->register1 = programaMult(ram, cpu, candidato, candidato);
+        cpu->register2 = candidato;
 
-        if (quadrado == n) {
-            cpu->register1 = candidato;
-            printf ("Raiz quadrada de %d eh: %d\n", n, cpu->register1);
+        if (cpu->register1 == n) {
+            printf ("Raiz quadrada de %d eh: %d\n", n, cpu->register2);
             return;
         }
 
-        if (quadrado > n) break;
+        if (cpu->register1 > n) break;
 
         candidato++;
 
