@@ -54,7 +54,7 @@ int main() {
 
     initCPU(&cpu);
 
-    programaFib(&ram, &cpu, 32);
+    programaFib(&ram, &cpu, 46);
 
     freeRAM(&ram);
 

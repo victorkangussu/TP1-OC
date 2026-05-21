@@ -95,8 +95,8 @@ int programaDiv_shared(RAM *ram, CPU *cpu, int dividendo, int divisor) {
 
     cpu->register1 = abs_dividendo; // coloca o dividendo no registrador 1
 
-    setData(ram, 0, abs_dividendo); // Initialize RAM[0] with dividend
-    setData(ram, 1, abs_divisor);   // Initialize RAM[1] with divisor
+    setData(ram, 0, abs_dividendo); // coloca dividendo em ram->memory[0]
+    setData(ram, 1, abs_divisor);   // coloca divisor em ram->memory[1]
 
     int quociente = 0; // contador que armazenará o resultado da divisão
 
